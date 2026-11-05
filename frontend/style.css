@@ -1,9 +1,15 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
     min-height: 100vh;
     position: relative;
-    font-family: Arial, sans-serif;
 }
 
 body::before {
@@ -21,7 +27,113 @@ body::before {
     z-index: -1;
 }
 
-.content {
-    position: relative;
-    padding: 30px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a365d;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #2563eb;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.header h1 {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.boxes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #ddd;
+}
+
+.label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.problem {
+    border-top: 4px solid #ef4444;
+}
+
+.problem .label {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.solution {
+    border-top: 4px solid #10b981;
+}
+
+.solution .label {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a365d;
+}
+
+.box p {
+    font-size: 15px;
+    color: #555;
 }
