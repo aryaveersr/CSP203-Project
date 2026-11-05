@@ -3,8 +3,10 @@ import express from "express";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get("/", (_req, res) => {
-  res.send("Hello World!");
+app.use(express.static("./frontend", { extensions: ["html"] }));
+
+app.use((_req, res) => {
+  res.status(404).sendFile("404.html", { root: "./frontend" });
 });
 
 app.listen(port, () => {
