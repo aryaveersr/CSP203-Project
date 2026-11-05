@@ -10,5 +10,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Serving at http://localhost:${port}/`);
 });
