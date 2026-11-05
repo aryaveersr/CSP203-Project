@@ -15,8 +15,13 @@ export function createApp() {
     return res.send(`${JSON.stringify(req.session.user)}`);
   });
 
-  app.use((_req, res) => {
-    res.status(404).sendFile("404.html", { root: "./frontend" });
+  app.use((_, res) => {
+    return res.status(404).sendFile("404.html", { root: "./frontend" });
+  });
+
+  app.use((err, _, res) => {
+    console.error(err);
+    return res.status(500);
   });
 
   return app;
