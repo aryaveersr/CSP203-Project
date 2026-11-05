@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+    </head>
+    <body>
+        <form id="auth-form" method="post">
+            <label for="username">Username</label>
+            <input
+                id="username"
+                name="username"
+                type="text"
+                autocomplete="username"
+                required
+            />
+
+            <label for="password">Password</label>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+            />
+
+            <button type="submit" formaction="/api/auth/login">Login</button>
+            <button type="submit" formaction="/api/auth/register">
+                Register
+            </button>
+        </form>
+        <script>
+            document
+                .getElementById("auth-form")
+                .addEventListener("submit", async (ev) => {
+                    ev.preventDefault();
+
+                    const form = ev.currentTarget;
+                    const endpoint =
+                        ev.submitter?.getAttribute("formaction") || "/login";
+
+                    try {
+                        const response = await fetch(endpoint, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                username: form.elements.username.value,
+                                password: form.elements.password.value,
+                            }),
+                        });
+
+                        const text = await response.text();
+                        console.log("Response:", response.status, text);
+                    } catch (error) {
+                        console.error("Request failed:", error);
+                    }
+                });
+        </script>
+    </body>
+</html>
