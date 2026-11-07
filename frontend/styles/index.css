@@ -1,6 +1,15 @@
-body::before {
-    content: "";
-    position: fixed;
+.landing {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.landing .backdrop {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,53 +18,20 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.25;
     z-index: -1;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #1a365d;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.menu a:hover,
-.menu a.active {
-    color: #2563eb;
-}
-
-.header {
-    text-align: center;
-    padding: 50px 20px 20px;
-}
-
-.header h1 {
+.landing h1 {
     font-size: 46px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: #0f172a;
     margin-bottom: 10px;
 }
 
-.subtitle {
+.landing .subtitle {
     font-size: 18px;
-    color: #666;
+    color: var(--color-gray-600);
 }
 
 .main-content {
@@ -67,7 +43,7 @@ nav {
 .intro {
     text-align: center;
     font-size: 17px;
-    color: #555;
+    color: var(--color-gray-600);
     margin-bottom: 30px;
 }
 
@@ -83,7 +59,7 @@ nav {
     background-color: white;
     border-radius: 8px;
     padding: 24px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-gray-200);
 }
 
 .label {
