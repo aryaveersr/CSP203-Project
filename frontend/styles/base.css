@@ -25,7 +25,7 @@
   --color-gray-900: #18181b;
   --color-gray-950: #09090b;
 
-  --background: var(--color-gray-50);
+  --background: #fbf9f5;
   --text: var(--color-gray-900);
 }
 
@@ -64,7 +64,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--background);
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid #ede8df;
 }
 
 nav {
