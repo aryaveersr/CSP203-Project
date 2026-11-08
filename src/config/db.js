@@ -10,4 +10,13 @@ CREATE TABLE IF NOT EXISTS users (
   salt TEXT NOT NULL
 ) STRICT`);
 
+db.exec(`
+CREATE TABLE IF NOT EXISTS events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  description TEXT,
+  date TEXT NOT NULL,
+  venue TEXT NOT NULL
+) STRICT`);
+
 export default db;
