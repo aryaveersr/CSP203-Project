@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Notes - CampusHub</title>
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/notes_input.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/notes_create.css" />
   </head>
   <body>
     <header>
-      <a href="/" class="logo">Campus<span class="brand-accent">Hub</span></a>
+      <a href="/" class="logo">
+        Campus
+        <span class="primary-accent">Hub</span>
+      </a>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="notes_list.html">Events</a>
-        <a href="notes_input.html" class="active">Add Note</a>
+        <a href="/">Home</a>
+        <a href="/events">Events</a>
+        <a href="/notes">Notes</a>
       </nav>
     </header>
 
@@ -33,44 +36,57 @@
         action="/api/notes"
       >
         <div class="form-group">
-          <label for="title">Note Title <span class="required">*</span></label>
+          <label for="title">
+            Course Code
+            <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="code"
+            name="code"
+            placeholder="e.g., CSP203"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">
+            Note Title
+            <span class="required">*</span>
+          </label>
           <input
             type="text"
             id="title"
             name="title"
-            placeholder="e.g., CSP203 - Data Structures & Algorithms Summary"
+            placeholder="e.g., Data Structures & Algorithms Summary"
             required
             autocomplete="off"
           />
-          <small class="hint"
-            >Keep it clear and include the course code if applicable.</small
-          >
         </div>
         <div class="form-group">
-          <label for="author"
-            >Author / Contributor <span class="required">*</span></label
-          >
+          <label for="author"> Author / Contributor </label>
           <input
             type="text"
             id="author"
             name="author"
-            placeholder="e.g., Aryan Sharma (or Roll Number)"
-            required
+            placeholder="e.g., Aryan Sharma"
             autocomplete="name"
           />
         </div>
 
         <div class="form-group">
-          <label for="content"
-            >Note Content <span class="required">*</span></label
-          >
+          <label for="content"> Note Content </label>
           <textarea
             id="content"
             name="content"
             rows="10"
             placeholder="Write or paste your notes, key formulas, bullet points, or reference links here..."
-            required
           ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="files"> Attach Files </label>
+          <input type="file" id="files" name="files" multiple />
         </div>
 
         <div class="form-actions">
