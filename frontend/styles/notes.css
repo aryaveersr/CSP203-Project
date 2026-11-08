@@ -1,0 +1,95 @@
+/* Notes page styles */
+
+.main-content {
+  max-width: 860px;
+  margin: 30px auto;
+  padding: 0 20px 50px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: 8px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-gray-600);
+  margin-bottom: 30px;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.note-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 22px 24px;
+  border: 1px solid #ede8df;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.course-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  margin-bottom: 8px;
+}
+
+.note-card h2 {
+  font-size: 20px;
+  color: #1a365d;
+  margin-bottom: 6px;
+}
+
+.note-card .author {
+  font-size: 13.5px;
+  color: var(--color-gray-500);
+  margin-bottom: 12px;
+}
+
+.note-card .author strong {
+  color: var(--color-gray-700);
+}
+
+.note-card .note-content {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.attachment-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-primary-700);
+  background-color: var(--color-primary-50);
+  padding: 7px 13px;
+  border-radius: 6px;
+  border: 1px solid var(--color-primary-200);
+  transition: background-color 0.15s ease;
+}
+
+.attachment-link:hover {
+  background-color: var(--color-primary-100);
+  text-decoration: underline;
+}
