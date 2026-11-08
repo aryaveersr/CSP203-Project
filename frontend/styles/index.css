@@ -1,5 +1,6 @@
 .landing {
   position: relative;
+  isolation: isolate; /* ✅ Brings background image above body color */
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/assets/campus.avif");
+  background-image: url("../assets/campus.avif"); /* ✅ Works in all environments */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -54,11 +55,11 @@
 .boxes {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* ✅ Keeps boxes properly responsive */
 }
 
 .box {
-  flex: 1;
+  flex: 1; /* ✅ Restores equal width boxes */
   min-width: 300px;
   background-color: #ffffff;
   border-radius: 8px;

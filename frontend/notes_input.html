@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Notes - CampusHub</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/notes_input.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">Campus<span class="brand-accent">Hub</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="notes_list.html">Events</a>
+        <a href="notes_input.html" class="active">Add Note</a>
+      </nav>
+    </header>
+
+    <main class="notes-container">
+      <div class="form-header">
+        <h1>Create New Note</h1>
+        <p class="form-desc">
+          Share your lecture notes, tutorial summaries, or revision guides with
+          fellow students.
+        </p>
+      </div>
+
+      <form
+        id="notes-form"
+        class="notes-card"
+        method="POST"
+        action="/api/notes"
+      >
+        <div class="form-group">
+          <label for="title">Note Title <span class="required">*</span></label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="e.g., CSP203 - Data Structures & Algorithms Summary"
+            required
+            autocomplete="off"
+          />
+          <small class="hint"
+            >Keep it clear and include the course code if applicable.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="author"
+            >Author / Contributor <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="author"
+            name="author"
+            placeholder="e.g., Aryan Sharma (or Roll Number)"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="content"
+            >Note Content <span class="required">*</span></label
+          >
+          <textarea
+            id="content"
+            name="content"
+            rows="10"
+            placeholder="Write or paste your notes, key formulas, bullet points, or reference links here..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <a href="/" class="btn-cancel">Cancel</a>
+          <button type="submit" class="btn-submit">Publish Note →</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2026 CampusHub · Indian Institute of Technology Bhilai</p>
+    </footer>
+  </body>
+</html>
