@@ -12,4 +12,21 @@ CREATE TABLE IF NOT EXISTS events (
   venue TEXT NOT NULL
 ) STRICT`);
 
+db.exec(`
+CREATE TABLE IF NOT EXISTS notes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  code TEXT NOT NULL,
+  uploaded_at TEXT NOT NULL,
+  title TEXT NOT NULL,
+  author TEXT NOT NULL,
+  content TEXT NOT NULL
+) STRICT`);
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS attachments (
+  id TEXT PRIMARY KEY NOT NULL,
+  note_id INTEGER NOT NULL,
+  filename TEXT NOT NULL
+) STRICT`);
+
 export default db;

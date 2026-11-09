@@ -25,10 +25,13 @@ main h1 {
 .notes-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 18px;
+  padding-top: 2rem;
 }
 
 .note-card {
+  width: 100%;
   background-color: white;
   border-radius: 8px;
   padding: 22px 24px;
@@ -79,7 +82,12 @@ main h1 {
   line-height: 1.5;
 }
 
-.attachment-link {
+.attachments {
+  display: flex;
+  gap: 1rem;
+}
+
+.attachments a {
   display: inline-block;
   text-decoration: none;
   font-size: 13.5px;
@@ -92,7 +100,7 @@ main h1 {
   transition: background-color 0.15s ease;
 }
 
-.attachment-link:hover {
+.attachments a:hover {
   background-color: var(--color-primary-100);
   text-decoration: underline;
 }
