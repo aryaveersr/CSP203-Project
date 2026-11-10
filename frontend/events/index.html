@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - CampusHub</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/events.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="logo">
+        Campus
+        <span class="primary-accent">Hub</span>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/events" class="active">Events</a>
+        <a href="/notes">Notes</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Campus Events</h1>
+      <p class="intro">
+        Find workshops, club sessions and fests happening around campus. Hosting
+        one yourself? Add it
+        <a href="/events/new">using our event form</a>.
+      </p>
+
+      <div id="events-container" class="events-container">
+        <p>Loading...</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 CampusHub · Indian Institute of Technology Bhilai</p>
+    </footer>
+
+    <script src="../scripts/events.js"></script>
+  </body>
+</html>

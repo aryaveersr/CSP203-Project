@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Event - CampusHub</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/events_new.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">
+        Campus
+        <span class="primary-accent">Hub</span>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/events" class="active">Events</a>
+        <a href="/notes">Notes</a>
+      </nav>
+    </header>
+
+    <main class="events-container">
+      <div class="form-header">
+        <h1>Add New Event</h1>
+        <p class="form-desc">
+          Let fellow students know about your workshop, club session or fest
+          happening around campus.
+        </p>
+      </div>
+
+      <form id="events-form" class="events-card">
+        <div class="form-group">
+          <label for="title">
+            Event Title
+            <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="e.g., Intro to Web Dev Bootcamp"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="venue">
+            Venue
+            <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="venue"
+            name="venue"
+            placeholder="e.g., Lecture Hall 2"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">
+            Date
+            <span class="required">*</span>
+          </label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">
+            Description
+            <span class="required">*</span>
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            rows="8"
+            placeholder="What is the event about? Mention the time, who can join, and anything people should bring..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <a href="/events" class="btn-cancel">Cancel</a>
+          <button type="submit" class="btn-submit">Publish Event →</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2026 CampusHub · Indian Institute of Technology Bhilai</p>
+    </footer>
+
+    <script src="../scripts/events_new.js"></script>
+  </body>
+</html>

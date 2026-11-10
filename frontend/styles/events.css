@@ -1,0 +1,80 @@
+main {
+  max-width: 860px;
+  margin-inline: auto;
+  padding: 30px 20px 80px;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: 8px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-gray-600);
+  text-wrap: balance;
+  margin-bottom: 30px;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 2rem;
+}
+
+.event-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 22px 24px;
+  border: 1px solid #ede8df;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.date-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  margin-bottom: 8px;
+}
+
+.event-card h2 {
+  font-size: 20px;
+  color: #1a365d;
+  margin-bottom: 6px;
+}
+
+.event-card .venue {
+  font-size: 13.5px;
+  color: var(--color-gray-500);
+  margin-bottom: 12px;
+}
+
+.event-card .venue strong {
+  color: var(--color-gray-700);
+}
+
+.event-card .event-description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
