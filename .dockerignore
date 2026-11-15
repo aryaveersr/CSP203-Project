@@ -1,0 +1,6 @@
+.env
+.git
+.gitignore
+users.sqlite
+node_modules/
+user_uploads/

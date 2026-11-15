@@ -15,22 +15,40 @@ Make sure you have installed on your system:
 
 ## How to Run the Project
 
+### With Docker
+
+Follow these steps to run the project with Docker:
+
+#### 1. Build the Docker image
+
+```sh
+docker build -t campushub .
+```
+
+#### 2. Run the Docker container
+
+```sh
+docker run -p 3000:3000 campushub
+```
+
+### Without Docker
+
 Follow these steps to run the project locally:
 
-### 1. Clone the repository
+#### 1. Clone the repository
 
 ```sh
 git clone https://github.com/aryaveersr/CSP203-Project.git
 cd CSP203-Project
 ```
 
-### 2. Install dependencies
+#### 2. Install dependencies
 
 ```sh
 npm install
 ```
 
-### 3. Setup Environment Variables
+#### 3. Setup Environment Variables
 
 Create a `.env` file in the root directory:
 
@@ -45,7 +63,7 @@ Create a `.env` file in the root directory:
 
 _(Or simply create a file named `.env` and copy the contents of `.env.example` into it)._
 
-### 4. Start the server
+#### 4. Start the server
 
 To run in development mode (with auto-reload on changes):
 
@@ -59,9 +77,9 @@ Or to run in standard mode:
 npm start
 ```
 
-### 5. Open in browser
+### Open in browser
 
-Open your browser and navigate to:
+Once you have started the server either with or without Docker, open your browser and navigate to:
 
 ```
 http://localhost:3000
