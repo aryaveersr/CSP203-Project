@@ -98,7 +98,7 @@ async function downloadAttachment(req, res) {
   if (!attachment) return res.status(404).send("Attachment not found");
 
   const filePath = path.join(UPLOAD_DIR, id);
-  res.download(filePath);
+  res.download(filePath, attachment.filename);
 }
 
 const router = express.Router();
