@@ -3,7 +3,7 @@ const form = document.getElementById("notes-form");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const res = await fetch("/api/create_event", {
+  const res = await fetch("/api/create_note", {
     method: "POST",
     body: new FormData(form),
   });
