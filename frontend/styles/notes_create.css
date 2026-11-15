@@ -10,7 +10,6 @@ body {
   flex: 1;
 }
 
-/* Header Text */
 .form-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -43,7 +42,6 @@ body {
   margin: 0 auto;
 }
 
-/* Form Card (clean, card-based UI) */
 .notes-card {
   background-color: #ffffff;
   border: 1px solid var(--color-gray-200);
@@ -55,7 +53,6 @@ body {
   gap: 1.5rem;
 }
 
-/* Form Groups & Inputs */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -93,7 +90,6 @@ body {
   color: var(--color-gray-400);
 }
 
-/* Focused Input State (matches primary blue theme) */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -107,7 +103,6 @@ body {
   min-height: 180px;
 }
 
-/* Buttons */
 .form-actions {
   display: flex;
   justify-content: flex-end;
@@ -157,7 +152,6 @@ body {
   transform: scale(0.98);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 640px) {
   .notes-card {
     padding: 1.5rem;
