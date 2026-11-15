@@ -110,3 +110,15 @@ main {
   font-size: 15px;
   color: var(--color-gray-600);
 }
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  margin: 3.5rem 0 0.5rem;
+  color: var(--color-gray-900);
+}
+
+.step .label {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
