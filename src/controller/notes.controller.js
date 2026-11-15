@@ -54,12 +54,12 @@ async function getNotes(req, res) {
 }
 
 async function createNote(req, res) {
-  const { code, title, author, content } = req.body;
-  const files = req.files;
+  const { code, title, author = "", content = "" } = req.body;
+  const files = req.files ?? [];
 
-  for (const value of [code, title, author, content]) {
+  for (const value of [code, title]) {
     if (!value || value.trim() === "") {
-      return res.status(400).send(`Missing required fields.`);
+      return res.status(400).send({ message: "Missing required fields." });
     }
   }
 
