@@ -8,7 +8,7 @@ A centralized platform for IIT Bhilai students to share course notes and discove
 
 Make sure you have installed on your system:
 
-- [Node.js](https://nodejs.org/) (v20 or higher recommended)
+- [Node.js](https://nodejs.org/) (v22 or higher recommended)
 - [Git](https://git-scm.com/)
 
 ---
