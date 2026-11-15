@@ -23,7 +23,7 @@ const notesCard = ({
     ${attachments
       .map(
         (attachment) =>
-          `<a href="/api/download_attachment?id=${attachment.id}" download>${attachment.filename} ↓</a>`,
+          `<a href="/api/download_attachment?id=${attachment.attachment_id}" download>${attachment.filename} ↓</a>`,
       )
       .join("")}
   </div>
